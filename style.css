@@ -137,7 +137,6 @@ body{
     background-color: #333;
     position: absolute;
     overflow: hidden;
-    display: none;
 }
 
 .animation {
