@@ -24,12 +24,6 @@ body{
     overflow: hidden;
 }
 
-#videosWrapper{
-    background-color: black;
-    position: absolute;
-    max-width:100vw;
-    display: none;
-}
 .welcome img{
     max-width: 500px;
     width: 100%;
@@ -116,9 +110,6 @@ body{
     }
 }
 @media screen and (max-width: 640px) {
-    #videosWrapper{
-        top: 25%;
-    }
     .welcome h1{
         font-size: 30px;
     }
@@ -141,6 +132,7 @@ body{
     background-color: #333;
     position: absolute;
     overflow: hidden;
+    display: none;
 }
 
 .animation {
@@ -157,5 +149,30 @@ body{
     }
     100% {
         background-position: -200% 0;
+    }
+}
+.video-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        height: 56.25vw;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        width: 177.78vh;
     }
 }
