@@ -125,6 +125,11 @@ body{
         transform:scale(0.8);
     }
 }
+@media screen and (max-width: 400px) {
+    .welcome{
+        height: 94vh;
+    }
+}
 
 .video-placeholder {
     width: 100vw; /* Adjust the width as needed */
